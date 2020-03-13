@@ -1,0 +1,111 @@
+---
+layout: post
+title: "[C++] iostream"
+description: "Demo post displaying the various ways of highlighting code in Markdown."
+tags: [C++]
+categories: [C++]
+---
+
+------------------------------------------------------------------------------------------------------------
+
+## C++ 문자열
+문자열(string)이란 메모리에 저장된 일련의 연속된 문자(charactor)들의 집합을 의미한다.  
+C++에서는 이러한 문자열을 다음과 같은 두 가지 방법으로 생성할 수 있다.  
+<br/>
+1. C언어 스타일의 문자열
+2. string클래스를 이용한 문자열
+<br/>
+<br/>
+
+## C언어 스타일의 문자열
+C++에서는 큰따옴표("")를 사용해 사용되는 문자열을 문자열 상수(string constant)라고 한다.  
+상수라고 표현하는 이유는 해당 문자열이 이름을 가지고 있지 않으며, 문자열의 내용 또한 변경할 수 없기 때문이다.  
+C++에서 문자형 배열을 선언하면 이 배열이 곧 문자열 변수가 된다.  
+(C++에서는 문자열의 길이에 제한을 두지 않는다.)  
+<br/>
+<br/>
+
+## 널(NULL) 문자
+C++에서 문자형 배열로 선언된 문자열 변수는 문자열의 끝을 '\0'로 프로그램에 따로 알려주어야 한다.  
+이러한 문자를 널(NULL)문자라고 하며, 아스키코드 값은 0이다.  
+널 문자의 유무로 문자형 데이터 배열과 실제 문자열을 서로 구분할 수 있다.  
+<br/>
+<br/>
+
+## 문자열 입력
+C++에서 문자열을 입력받기 위해서는 문자열이 저장될 문자형 배열을 미리 생성해두어야 한다.  
+C++에서 cin객체는 띄어쓰기를 포함한 탭 문자, 캐리지 리턴 문자 등을 모두 문자열의 끝으로 인식한다.  
+따라서 띄어쓰기를 포함하 문자열을 전부 입력 받으려면 cin객체의 get()메소드를 사용하여 다음과 같이 사용하여야 한다.
+또한, 20바이트 이상의 이름을 입력 받을 경우 생기는 오류를 해결하기 위해서 ignore()메소드를 사용하여 다음과 같이 사용항여야 한다.
+
+#### 예제
+{% highlight cpp %}
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	const int SIZE = 20;
+	char address[SIZE];
+	char name[SIZE];
+
+	cout << "자신의 이름을 적어주세요 : ";
+	cin.get(name, SIZE).ignore(SIZE,'\n');
+	cout << "자신이 살고 있는 도시를 적어주세요 : ";
+	cin.get(address, SIZE).ignore(SIZE, '\n');
+
+	cout << address << "에 살고 있는 " << name << "님";
+
+	return 0;
+}
+{% endhighlight %}
+
+#### 실행결과
+    {% raw %}
+    자신의 이름을 적어주세요 : 홍 길동
+    자신이 살고 있는 도시를 적어주세요 : abcdefghijklmnopqrstuvwxyz
+    abcdefghijklmnopqrs에 살고 있는 홍 길동님
+    {% endraw %} 
+    
+위의 실행결과를 보면 띄어쓰기를 포함한 문자열을 받을 수 있으며, 20바이트 이상의 데이터가 입력될시 무시되는 것을 볼 수 있다.  
+<br/>
+C언어 스타일의 문자열 입력에서는 입력할 문자열의 길이를 미리 알고 있어야만 한다.    
+하지만 C++에서 제공하는 string클래스를 사용하면 간단하게 문제를 해결할 수 있다.  
+
+#### 예제
+{% highlight cpp %}
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main()
+{
+	string address, name;
+
+	cout << "자신의 이름을 적어주세요. : ";
+	getline(cin, name);
+	cout << "자신이 살고 있는 도시를 적어주세요 : ";
+	getline(cin, address);
+
+	cout << address << "에 살고 있는 " << name << "님";
+
+	return 0;
+}
+{% endhighlight %}
+
+#### 실행결과
+    {% raw %}
+    자신의 이름을 적어주세요. : 홍 길동
+    자신이 살고 있는 도시를 적어주세요 : abcdefghijklmnopqrstuvwxyz
+    abcdefghijklmnopqrstuvwxyz에 살고 있는 홍 길동님
+    {% endraw %}
+
+## C언어 문자열 처리 함수
+C++에서는 C언어 스타일의 문자열을 처리하기 위해 C 라이브러리의 문자열 처리 함수를 사용할 수 있다.    
+이러한 C언어의 문자열 라이브러리를 사용하기 위해서는 cstring 헤더 파일을 포함해야 한다.  
+
+<br/>
+<br/>
+<br/>
+
+<참고자료>
