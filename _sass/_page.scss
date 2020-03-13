@@ -91,7 +91,7 @@ body {
 // Single Post and Page
 // --------------------------------------------------
 .entry-meta {
-	@include font-rem(12);
+	@include font-rem(10);
 	text-transform: uppercase;
 	color: lighten($base-color,60);
 	a {
