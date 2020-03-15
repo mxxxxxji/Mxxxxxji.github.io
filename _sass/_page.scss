@@ -19,7 +19,7 @@ body {
 	background-color: $header-color;
 }
 .entry-content {
-	@include font-size(10);
+	@include font-size(12);
 	// Dotted line underlines for links
 	p > a,
 	li > a {
