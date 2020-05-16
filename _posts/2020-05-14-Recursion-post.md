@@ -105,7 +105,7 @@ public class RecursionTest3 {
 
 #### Recusion을 이용하여 n번째 Fibonacci 구하기
 {% highlight cpp %}
-public class RecusionTest4 {
+public class RecursionTest4 {
 	public static void main(String[] args){
 		int result = func(6);
 		System.out.println(result);
@@ -124,8 +124,34 @@ public class RecusionTest4 {
     8
     {% endraw %} 
 
-#### Recusion을 이용하여 n번째 Fibonacci 구하기
-
+#### Recusion을 이용하여 최대공약수 구하기(유클리드 호제법)
+-유클리드 호제법 : m≥n인  두 양의정수 m과 n에 대해서 m이 n의 배수이면 gcd(m,n) = n이고, 그렇지 않으면 gcd(m,n)=gcd(n, m%n)이다.
+{% highlight cpp %}
+public class RecursionTest4 {
+	public static void main(String[] args){
+		System.out.println((int) gcd(9,12));
+	}
+	public static double gcd(int m, int n){
+		if(m<n)
+		{
+			int tmp = m;
+			m = n;
+			n = tmp;	//swap m and n
+		}
+		
+		if(m%n==0){
+			
+			return n;
+		}else{
+			return gcd(n, m%n);
+		}
+	}
+}
+{% endhighlight %}
+    {% raw %}
+    3
+    {% endraw %}
+    
 <br/>
 <br/>
 <br/>
