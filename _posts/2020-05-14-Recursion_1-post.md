@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "[Algorithm] Recursion"
+title: "[Algorithm] Recursion_1"
 description: "Demo post displaying the various ways of highlighting code in Markdown."
 tags: [Algorithm]
 categories: [Algorithm]
