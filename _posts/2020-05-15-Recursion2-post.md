@@ -81,6 +81,27 @@ public class RecursionTest8 {
 
 <br/>
 <br/>
+## 최대값 찾기
+{% highlight cpp %}
+public class RecursionTest9 {
+	public static void main(String args[]){
+		int[] data = {1,2,5,6,2,8,9};
+		System.out.println(findMax(data,0,6));
+	}
+	public static int findMax(int[] data, int begin, int end){
+		if(begin==end)
+			return data[begin];
+		else{
+			return Math.max(data[begin],findMax(data, begin+1, end));
+		}
+	}
+}
+{% endhighlight %}
+    {% raw %}
+    9
+    {% endraw %}
+<br/>
+<br/>
 
 ## 순환함수(Recursion)와 반복문(iteration)
 - 모든 순환함수는 반복문으로 변경가능하다.
