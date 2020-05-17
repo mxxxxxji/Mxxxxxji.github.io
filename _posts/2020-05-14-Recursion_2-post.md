@@ -11,6 +11,7 @@ categories: [Algorithm]
 ## 문자열의 길이계산
 1. Base Case : 문자열 값이 null인 경우 -> retun 0;
 2. Recursive Case : 첫번째 문자를 제외한 길이+1을 return 한다.
+
 {% highlight cpp %}
 public class RecursionTest6 {
 	public static void main(String[] args){
@@ -32,6 +33,7 @@ public class RecursionTest6 {
 <br/>
 
 ## 문자열을 뒤집어 프린트
+
 {% highlight cpp %}
 public class RecursionTest7 {
 
@@ -56,6 +58,7 @@ public class RecursionTest7 {
 <br/>
 
 ## 2진수로 변환하여 출력
+
 {% highlight cpp %}
 public class RecursionTest8 {
 	public static void main(String[] args){
