@@ -114,5 +114,5 @@ public class RecursionTest9 {
 <br/>
 <br/>
 **참고자료**<br/>
-[Recursion의 개념과 기본 예제들](excelsior-cjh.tistory.com/28)
+[Recursion의 개념과 기본 예제들](https://excelsior-cjh.tistory.com/category/Algorithms?page=2)
 
