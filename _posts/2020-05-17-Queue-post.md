@@ -10,7 +10,8 @@ categories: [Algorithm]
 
 ## 큐(Queue)의 정의
 
-![image](https://user-images.githubusercontent.com/52437364/82182272-f6fbff00-991e-11ea-8f97-7549f07ebe6d.png)
+![image](https://user-images.githubusercontent.com/52437364/82182467-4a6e4d00-991f-11ea-8949-8f79f013a1ca.png)
+
 
 <br/>
 <br/>
