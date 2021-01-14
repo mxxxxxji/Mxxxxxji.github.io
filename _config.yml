@@ -68,11 +68,15 @@ google_verify:
 bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+# Math equation
 timezone:    America/New_York
 locale:      en_US
 future:      false
 highlighter: rouge
 markdown:    kramdown
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
 sass:
   sass_dir: _sass
   style: compressed
@@ -96,12 +100,7 @@ page_layout: page
 # Format titles with titlecase?
 titlecase: true
 
-# Math equation
-markdown: kramdown
-highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
+
 
 include: [".htaccess"]
 exclude: ["demo/*", "lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
