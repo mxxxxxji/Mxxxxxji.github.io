@@ -74,9 +74,6 @@ locale:      en_US
 future:      false
 highlighter: rouge
 markdown:    kramdown
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
 sass:
   sass_dir: _sass
   style: compressed
