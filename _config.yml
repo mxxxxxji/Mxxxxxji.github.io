@@ -80,8 +80,8 @@ bing_verify:
 timezone:    America/New_York
 locale:      en_US
 future:      false
-highlighter: rouge
-markdown:    kramdown
+#highlighter: rouge
+#markdown:    kramdown
 sass:
   sass_dir: _sass
   style: compressed
