@@ -5,9 +5,9 @@ description:      Describe your website here.
 markdown: kramdown
 highlighter: rouge
 lsi: false
-
 excerpt_separator: "\n\n"
 incremental: false
+
 # put your disqus here
 disqus_shortname:
 reading_time:     true # if true, shows the estimated reading time for a post
